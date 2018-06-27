@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>dashboard</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" >
+    <link rel="stylesheet" href="style.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="./css/bootstrap-theme.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <!-- Latest compiled and minified JavaScript -->
+
+    <script type="text/javascript" charset="utf-8" src="js/cordova-2.5.0.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/jquery-3.3.1.min.js"></script> 
+    
+    <script src="./js/bootstrap.min.js" ></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+   
+</head>
+
+<body>
+    <div class="wrapper skewed-bg">
+        <div class="statusBar">
+            <div class="signal">
+                <span class="active"></span>
+                <span class="active"></span>
+                <span class="active"></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="clock">
+                <p>10:15 AM</p>
+            </div>
+            <div class="battery">
+                <span></span>
+            </div>
+        </div>
+        <div class="header">
+            <div class="hamburgerWrapper">
+                <i class="fa fa-chevron-left" aria-hidden="true"></i>
+            </div>
+            <div class="headerLabel">
+                <h1>Dashboard</h1>
+            </div>
+            <div class="headerMenu">
+                <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+            </div>
+        </div>
+        <div class="welcome_content">
+            <h4>welcome</h4>
+            <h2>Saddy young!</h2>
+        </div>
+        <div class="content-area">
+            <div class="row">
+                <div class="col-sm col-xs-6" onclick="loadLand()">
+                    <div class="card">
+                        <i class="fa fa-globe" aria-hidden="true"></i>
+                        <div class="clearfix"></div>
+                        <p>Lands</p>
+                    </div>
+                </div>
+                <div class="col-sm col-xs-6" onclick="loadchitFund()">
+                    <div class="card-1">
+                        <i class="fa fa-google-wallet" aria-hidden="true"></i>
+                        <div class="clearfix"></div>
+                        <p>chit funds</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm col-xs-6" onclick="loadagarWood()">
+                    <div class="card">
+                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                        <div class="clearfix"></div>
+                        <p>agarwoods</p>
+                    </div>
+                </div>
+                <div class="col-sm col-xs-6" onclick="loadEmployee()">
+                    <div class="card-1">
+                        <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                        <div class="clearfix"></div>
+                        <p>employees</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm col-xs-6" onclick="loadCustomer()">
+                    <div class="card">
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                            <div class="clearfix"></div>
+                        <p>customers</p>
+                    </div>
+                </div>
+                <div class="col-sm col-xs-6" onclick="loadReports()">
+                    <div class="card-1">
+                            <i class="fa fa-folder" aria-hidden="true"></i>
+                            <div class="clearfix"></div>
+                        <p>reports</p>
+                    </div>
+                </div>
+               
+            </div>  
+            <div class="row">
+                <div class="col-sm col-xs-6" onclick="loadNotification()"">
+                    <div class="card">
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                            <div class="clearfix"></div>
+                        <p>Notification</p>
+                    </div>
+                </div>
+                <div class="col-sm col-xs-6">
+                    <div class="card-1" style="display: none;">
+                            <i class="fa fa-folder" aria-hidden="true"></i>
+                            <div class="clearfix"></div>
+                        <p>reports</p>
+                    </div>
+                </div>
+               
+            </div>   
+                  
+        </div>
+    </div>
+
+<script type="text/javascript" src="js/dashboard.js"></script>
+</body>
+
+</html>
