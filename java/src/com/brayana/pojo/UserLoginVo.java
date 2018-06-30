@@ -10,6 +10,23 @@ public class UserLoginVo {
 	private String userMobile;
 	private int userType;
 	private int userTypeId;
+	private String key;
+	private boolean status;
+	
+	
+	
+	public boolean isStatus() {
+		return status;
+	}
+	public void setStatus(boolean status) {
+		this.status = status;
+	}
+	public String getKey() {
+		return key;
+	}
+	public void setKey(String key) {
+		this.key = key;
+	}
 	public int getId() {
 		return id;
 	}

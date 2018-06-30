@@ -34,27 +34,11 @@ public class AdminServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		//response.getWriter().append("Served at: ").append(request.getContextPath());
-		
-		JSONObject json = new JSONObject();
-		
 		PrintWriter out = response.getWriter();
-		
+		JSONObject json = new JSONObject();
 		AdminServletHelper adminServletHelper = new AdminServletHelper();
-		
-		boolean status = false;
-		
-		if (request.getParameter("username")!=null || request.getParameter("password")!=null) {
-			UserLoginDAO userLoginDAO = new UserLoginDAO();
-			status = userLoginDAO.validateLogin(adminServletHelper.getUserLoginVo(request));
-			
-			HttpSession session = request.getSession();  
-	        session.setAttribute("name",request.getParameter("username"));  
-		}
-		
-		json.accumulate("responseValue", status);
+		json = adminServletHelper.doAdminServlet(request);
 		out.println(json.toString());
-		
 	}
 
 	/**
