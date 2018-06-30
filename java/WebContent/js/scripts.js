@@ -2,10 +2,10 @@
 var Env = "local";
 
 if(Env == "local"){
-  var host_url = "http://localhost/brayana/web/";
-  var api_url = "http://localhost/brayana";
-  //var api_url = "http://brayana.tweenix.com";
-  var replace_ct = "/brayana/web/";
+  var host_url = "http://localhost:8080/Brayana/";
+  //var api_url = "http://localhost/brayana";
+  var api_url = "http://brayana.tweenix.com";
+  var replace_ct = "/Brayana/";
 }else{
   var host_url = "http://brayana.tweenix.com/web/";
   var api_url = "http://brayana.tweenix.com";
