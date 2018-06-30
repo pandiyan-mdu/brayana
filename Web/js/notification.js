@@ -1,3 +1,3 @@
-function openAgarWoodAddPage(){
-    window.location='./notificationAddEdit.html';
-}
+function openAgarWoodAddPage(){
+    window.location='./notificationAddEdit.html';
+}
