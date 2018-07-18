@@ -1,0 +1,8 @@
+
+.marginBottom10 {
+  margin-bottom:10px;
+}
+table.dataTable thead th, table.dataTable tbody td{
+  border: 1px solid #ddd !important;
+  text-transform: unset !important;
+}

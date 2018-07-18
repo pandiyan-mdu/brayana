@@ -1,0 +1,68 @@
+
+.marginBottom10 {
+  margin-bottom:10px;
+}
+table.dataTable thead th, table.dataTable tbody td{
+  border: 1px solid #ddd !important;
+  text-transform: unset !important;
+}
+
+
+.sideBarCollapseFirst {
+	color: #FFFFFF;
+    margin: 5px 18px 6px 43px;
+    border: white;
+    opacity: 1;
+    border-radius: 4px;
+    display: block;
+     border-color: #075073;
+}
+
+.sideBarCollapseLast {
+	color: #FFFFFF;
+    margin: 5px 18px 6px 43px;
+    border: white;
+    opacity: 1;
+    border-radius: 4px;
+    display: block;
+     border-color: #075073;
+}
+
+.sideBarCollapseMenuActive{
+	background: #ee7f2e;
+}
+
+.textAlignLeft{
+	    text-align: left;
+}
+
+.sideNavADefaultColor{
+	/*background-color: rgba(255, 255, 255, 0.13);*/
+	border:none;
+}
+
+.title{
+  display: inline-block;
+    font-size: 18px;
+    margin: 0;
+    line-height: 1;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
+}
+
+ .userName a{
+    cursor: default;
+    
+ }
+
+ .userName p {
+  /*color: #333333;*/
+ }
+
+ .logoStyle {
+    width: 65px;
+    height: 38px;
+ }
+

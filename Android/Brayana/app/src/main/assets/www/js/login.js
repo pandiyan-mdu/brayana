@@ -1,5 +1,8 @@
+
+
 function loginSubmit(){
-    	var username = $("#username").val();
+
+        var username = $("#username").val();
 
         var password = $("#password").val();
 
@@ -24,10 +27,11 @@ function loginSubmit(){
                     if(status == "OK"){
 
                       setLocal("auth",data.token);
+                      setLocal("u",data.user_type);
 
                       getLocal("auth");
 
-                      islogged();
+                      isloggedLogin();
 
                     }else{
 
@@ -40,4 +44,6 @@ function loginSubmit(){
             });
 
         return false;
-    }
+
+}
+

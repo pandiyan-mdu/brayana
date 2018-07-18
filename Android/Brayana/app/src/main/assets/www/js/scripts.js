@@ -1,29 +1,65 @@
 // global.js
-var Env = "server";
+var Env = "local";
 
 if(Env == "local"){
-  var host_url = "http://localhost/brayana/web/";
-  var api_url = "http://localhost/brayana";
-  //var api_url = "http://brayana.tweenix.com";
+  //var host_url = "http://localhost/brayana/web/";
+  var host_url = "";
+  //var api_url = "http://localhost/brayana";
+  var api_url = "http://brayana.tweenix.com";
   var replace_ct = "/brayana/web/";
 }else{
   var host_url = "http://brayana.tweenix.com/web/";
   var api_url = "http://brayana.tweenix.com";
   var replace_ct = "/web/";
 }
+function hideMasters(){
+    var auth = getLocal("auth");
+    var userType = getLocal("u");
+    console.log($(".enquiry a"));
+    if(userType != 1){
+        $(".master").css("display","none");
+        $(".enquiry a").attr("href",host_url+"enquiry/enquiryForm.html");
+        //$(".nav>.master").hide();
+    }else{
+       $(".master").css({"display":"inline"});
+       $(".enquiry a").attr("href",host_url+"enquiry/enquiryView.html");
+    }
+}
+$( document ).ready(function() {
+  hideMasters();
+});
+
 
 function islogged(){
+
+}
+
+
+function isloggedLogin(){
   var pathname = window.location.pathname; // Returns path only
   var url      = window.location.href;     // Returns full URL
-  var currentPath = pathname.replace(replace_ct,"");
+ // var currentPath = pathname.replace(replace_ct,"");
+  var currentPath = pathname;
   var auth = getLocal("auth");
+  var userType = getLocal("u");
   var isLogged = (typeof auth != "undefined" && auth != "" && auth != null);
+  //if(isLogged && (currentPath == "login.html" || currentPath == "index.html")){
+  var currentPathIndex = currentPath.indexOf("login.html");
   if(isLogged){
-    window.location.href='home.html';
-  }else{
-    window.location.href='login.html';
+    if(userType == 1){
+        window.location.href=host_url+'land/landView.html';  
+    }else if(userType == 2){
+        window.location.href=host_url+'customer/customerLand/customerLandView.html';  
+
+    }else if(userType == 3){
+        window.location.href=host_url+'myTransaction/transactionLandView.html';  
+    }
+    
+  }else if(!isLogged && currentPath != "login.html"){
+    window.location.href=host_url+'login.html';
   }
 }
+
 
 function getCurrentPath(){
   var pathname = window.location.pathname; // Returns path only
@@ -40,6 +76,7 @@ function checkPaths(){
 }
 function logout(){
     removeLocal("auth");
+     removeLocal("u");
     islogged();
 }
 
@@ -106,6 +143,9 @@ var getParams = function (url) {
 function cl(msg){
   console.log(msg);
 }
+function goBack() {
+    window.history.back();
+}
 
 (function ($) {
   $.fn.serializeFormJSON = function () {
@@ -124,4 +164,5 @@ function cl(msg){
       });
       return o;
   };
-})(jQuery);
+ })(jQuery);
+
