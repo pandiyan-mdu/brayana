@@ -18,7 +18,7 @@
 <link href="assets/css/bootstrap.min.css" rel="stylesheet" />    
 <link href="css/style.css" rel="stylesheet" type="text/css">
 <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
-<script type="text/javascript" src="js/scripts.js"></script>
+<script type="text/javascript" src="js/cordova-2.4.0.js"></script>
 
 </head>
     
@@ -32,11 +32,69 @@
     
 <script type="text/javascript">
     $(document).ready(function(){
-        islogged();
+    	alert("");
+        onLoad();
     });
 
+
+			  
+			/*if(localStorage.getItem('uname')!=null && localStorage.getItem('pass')!=null && localStorage.getItem('empId')!=null && localStorage.getItem('userid')!=null)
+			{
+			 
+			
+			}else{*/
+			
+			/*window.location='./Login.html';*/
+			/*}*/
+
+
+
+			 function onLoad() 
+			 {
+        	  document.addEventListener("deviceready", onDeviceReady, false);
+   			  document.addEventListener("resume", onResume, false);
+   			 } 
+
+   			 function onResume() {
+			    // Handle the resume eventme
+			    alert("on resu");
+			}
+   			 
+   			 
+   			 function onDeviceReady() {
+   			 	alert("");
+   			  checkConnection();
+   			  		//window.location='./Login.html';
+   			  }
+			 
+			  function checkConnection() { 
+			  
+			  var networkState = navigator.network.connection.type;
+
+	        var states = {};
+	        states[Connection.UNKNOWN]  = 'Unknown connection';
+	        states[Connection.ETHERNET] = 'Ethernet connection';
+	        states[Connection.WIFI]     = 'WiFi connection';
+	        states[Connection.CELL_2G]  = 'Cell 2G connection';
+	        states[Connection.CELL_3G]  = 'Cell 3G connection';
+	        states[Connection.CELL_4G]  = 'Cell 4G connection';
+	        states[Connection.NONE]     = 'No network connection';
+	        var isreload='0';
+	        
+	        localStorage.setItem('isReload',isreload);
+	        if(states[networkState] == 'No network connection')
+	         {
+	        	alert("No internet connection");
+	        
+	        /* return 1; */
+	        }else{
+	        	window.location='./login.html';
+        	}
+        }
+			
+
 </script>  
-<script type="text/javascript" src="js/login.js"></script>
+<!-- <script type="text/javascript" src="js/login.js"></script> -->
 
 </body>
 </html>

@@ -21,7 +21,7 @@ public class MainActivity extends DroidGap {
         super.onCreate(savedInstanceState);
         //super.loadUrl("file:///android_asset/www/index.html");
 		super.setStringProperty("loadingDialog", "Loading Please Wait...");
-        super.loadUrl("file:///android_asset/www/login.html");
+        super.loadUrl("file:///android_asset/www/index.html");
     }
 
     	@Override
@@ -29,7 +29,7 @@ public class MainActivity extends DroidGap {
 		super.onRestart();
 		System.out.println("HomeActivity.onRestart()");
 		
-		
+	 
 		if(Tracker.isQuit)
 		{
 			//android.os.Process.killProcess(android.os.Process.myPid());
@@ -51,12 +51,28 @@ public class MainActivity extends DroidGap {
 		   Intent mainIntent = new Intent(this, MainActivity.class);
 		   mainIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP  );
 		   startActivity(mainIntent);
-		   finish();
+		   //finish();
 		  }else{
 		   finish();
 		  }
 		  ENABLE_RESTART   = false;
 		}
+
+
+	/*	@Override
+ protected void onResume() {
+    super.onResume();
+
+    restartMain();
+}*/
+
+
+@Override
+ protected void onPause() {
+    super.onPause();
+
+    finish();
+}
 
 
 }
