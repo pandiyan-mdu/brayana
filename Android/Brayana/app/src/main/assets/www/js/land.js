@@ -1,3 +1,6 @@
+
+var pageFlow = "";
+
 $(document).ready(function(){
         //islogged();
 
@@ -24,7 +27,17 @@ function openLandUpdatePage(){
 
 function init(){
     var currentPath = getCurrentPath();
-     getLands();  
+      
+
+     if(pageFlow == "view"){
+        getLands(); 
+     }else if(pageFlow == "edit"){
+        var params = getParams(window.location.href);
+        if(typeof params.id != "undefined" && params.id !="" && params.id != null){
+            getLandsByID(params.id);  
+        }  
+     } 
+
    /* if(currentPath == "land/landView.html"){
         getLands();  
     }else{
@@ -143,7 +156,7 @@ function saveLandDetail(){
           cache: false,
           success: function(msg, textStatus, xhr) {
             if(msg.STATUS == "OK"){
-                window.location.href=host_url+'land/landView.html';
+                window.location.href='landView.html';
             }else{
                 alert(msg.RESPONSE);
             }
@@ -184,7 +197,7 @@ function editLandDetail(){
           cache: false,
           success: function(msg, textStatus, xhr) {
             if(msg.STATUS == "OK"){
-                window.location.href=host_url+'land/landView.html';
+                window.location.href='landView.html';
             }else{
                 alert(msg.RESPONSE);
             }

@@ -74,10 +74,10 @@ function checkPaths(){
   console.log(window.location.href);
   console.log(pathname.replace(host_url,""));
 }
-function logout(){
+function logout(path){
     removeLocal("auth");
      removeLocal("u");
-    islogged();
+   window.location=path;
 }
 
 

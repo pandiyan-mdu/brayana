@@ -18,12 +18,12 @@ function onDeviceReady()
 
 function onOffline() 
 {
-  alert("on offline");
+   
 }
 
 function onOnline() 
 {
-  alert("Online");
+   
 }
 
 function onBackKeyDown() 
@@ -48,8 +48,6 @@ function checkConnection() {
   var isreload='0';
 
   localStorage.setItem('isReload',isreload);
-  alert(states[networkState]);
-
   if(states[networkState] == 'No network connection')
   {
   alert("No internet connection");
