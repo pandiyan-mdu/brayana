@@ -21,6 +21,8 @@
 
      <!-- Bootstrap core CSS     -->
     <link href="../css/brayana.css" rel="stylesheet" />
+     <link href="../css/brayanaMobile.css" rel="stylesheet" />
+
 
 
 
@@ -89,7 +91,7 @@
                                 </a>
                             </div>
                         </li>
-                    <li class="master">
+                    <!-- <li class="master">
                         <a href="../employee/employeeView.html">
                             <i class="pe-7s-science"></i>
                             <p>Employees</p>
@@ -150,7 +152,7 @@
                             <i class="pe-7s-users"></i>
                             <p>Enquiry</p>
                         </a>
-                    </li>
+                    </li> -->
                 </ul>
         </div>
     </div>
@@ -176,7 +178,7 @@
                         </li>
 
                     <li>
-                            <a href="javascript:;" onclick="logout();">
+                            <a href="javascript:;" onclick="logout('../login.html');">
                                 <p>Log out</p>
                             </a>
                         </li>
@@ -205,34 +207,54 @@
                                         <form name="agarWoodAddForm" id="agarWoodAddForm" onsubmit="return editagarWoodDetail();">
                                         <div>
                                             <div class="row">
-                                                <div class="col-md-5">
+                                                <div class="col-md-3">
                                                     <div class="form-group">
                                                         <label>Site Name</label>
                                                         <input type="hidden" class="form-control" value="" id="site_id" >
-                                                        <input type="text" class="form-control" placeholder="Site Name" value="" id="siteName">
+                                                        <input type="text" class="form-control" placeholder="Site Name" value="" id="siteName" required>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-3">
                                                     <div class="form-group">
-                                                        <label>Number of trees</label>
-                                                        <input type="number" pattern= "[0-9]" class="form-control" placeholder="Number of trees" value="" id="noTree">
+                                                        <label>Survey No</label>
+                                                        <input type="text" class="form-control" placeholder="survey No" value="" id="surveyNo" required>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-4">
+                                                <div class="col-md-3">
                                                     <div class="form-group">
-                                                        <label for="exampleInputEmail1">Tree Amount</label>
-                                                        <input type="number" pattern= "[0-9]" class="form-control" placeholder="Tree Amount" id="treeAmount">
+                                                        <label for="exampleInputEmail1">Area</label>
+                                                        <input type="text" class="form-control" placeholder="Area" id="area" required>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="form-group">
+                                                        <label>City</label>
+                                                        <input type="text" class="form-control" placeholder="City" value="" id="city" required>
                                                     </div>
                                                 </div>
                                             </div>
-        
-                                             <div class="row">
-                                                <div class="col-md-5">
+                                        
+                                            <div class="row">
+                                                
+                                                <div class="col-md-3">
                                                     <div class="form-group">
-                                                        <label>Total Amount</label>
-                                                        <input type="text" class="form-control" placeholder="totalAmount" value="" id="totalAmount" readonly="">
+                                                        <label>Installment in Months</label>
+                                                        <input type="text" class="form-control" placeholder="Installment in Months" value="" id="installmentMonths" required>
                                                     </div>
                                                 </div>
+                                                <div class="col-md-3">
+                                                    <div class="form-group">
+                                                        <label>Installment Amount</label>
+                                                        <input type="text" class="form-control" placeholder="Installment Amount" value="" id="installmentAmount" required>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="form-group">
+                                                        <label>Total Amount</label>
+                                                        <input type="text" class="form-control" placeholder="Total Amount" value="" disabled id="totalAmount" required>
+                                                    </div>
+                                                </div>
+
                                             </div>
 
         
@@ -266,6 +288,7 @@
 
 <script type="text/javascript">
  $(document).ready(function(){
+     agarPageFlow = "edit";
     init();
 });    
 

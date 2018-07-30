@@ -28,6 +28,7 @@
 
      <!-- Bootstrap core CSS     -->
     <link href="../css/brayana.css" rel="stylesheet" />
+    <link href="../css/brayanaMobile.css" rel="stylesheet" />
 
 
 
@@ -97,7 +98,7 @@
                                 </a>
                             </div>
                         </li>
-                    <li class="master">
+                    <!-- <li class="master">
                         <a href="../employee/employeeView.html">
                             <i class="pe-7s-science"></i>
                             <p>Employees</p>
@@ -158,7 +159,7 @@
                             <i class="pe-7s-users"></i>
                             <p>Enquiry</p>
                         </a>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
         </div>
@@ -184,7 +185,7 @@
                         </li>
 
                            <li>
-                            <a href="javascript:;" onclick="logout();">
+                            <a href="javascript:;" onclick="logout('../login.html');">
                                 <p>Log out</p>
                             </a>
                         </li>
@@ -200,7 +201,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="card col-md-11">
-                                <div class="content table-responsive table-full-width">
+                                <!-- <div class="content table-responsive table-full-width">
                                   <div class="row">
                                     <div class="col-md-6">
                                         <h4 class="title">AgarWoods <img src="../img/tree.png"> </h4>
@@ -208,6 +209,19 @@
                                     <div class="col-md-6">
                                         <span class="pull-right">
                                             <button type="submit" class="btn btn-primary btn-fill" onclick="openAgarWoodAddPage()">Add</button></span>
+                                    </div>
+                                  </div>
+                                </div> -->
+
+
+                                <div class="content table-responsive table-full-width noBorder"  >
+                                  <div class="row">
+                                    <div class="">
+                                        <h4 class="title" style="float:  left;">AgarWoods <img src="../img/tree.png"></h4>
+                                    </div>
+                                    <div class="col-md-10">
+                                        <span class="pull-right">
+                                            <button type="submit" class="btn btn-primary btn-fill <button type=" submit"="" onclick="openAgarWoodAddPage()">Add</button></span>
                                     </div>
                                   </div>
                                 </div>
@@ -218,8 +232,9 @@
                                         <thead>
                                             <th>S.NO</th>
                                             <th>Site Name</th>
-                                            <th>Number of trees</th>
-                                            <th>Tree Amount</th>
+                                            <th>Survey No</th>
+                                            <th>Area</th>
+                                            <th>City</th>
                                             <th></th>
                                         </thead>
                                         
@@ -282,6 +297,7 @@
 </body>
 <script type="text/javascript">
  $(document).ready(function(){
+    agarPageFlow = "view";
     init();
 });    
 

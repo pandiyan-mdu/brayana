@@ -1,3 +1,6 @@
+var chitPageFlow = "";
+
+
 $(document).ready(function(){
         islogged();
 
@@ -15,7 +18,19 @@ $(document).ready(function(){
 });
 
 function init(){
-  getchitFunds();
+
+if(chitPageFlow == "view"){
+        getchitFunds();
+     }else if(chitPageFlow == "edit"){
+        var params = getParams(window.location.href);
+        if(typeof params.id != "undefined" && params.id !="" && params.id != null){
+             getchitFundsById(params.id);  
+        }  
+     } 
+
+
+
+ /* getchitFunds();*/
     /*var currentPath = getCurrentPath();
     if(currentPath == "chitFund/chitFundView.html"){
         getchitFunds();  
@@ -127,7 +142,7 @@ function editchitFundDetail(){
           cache: false,
           success: function(msg, textStatus, xhr) {
                 if(msg.STATUS == "OK"){
-                    window.location.href=host_url+'chitFund/chitFundView.html';
+                    window.location.href='chitFundView.html';
                 }else{
                     alert(msg.RESPONSE);
                 }
@@ -159,7 +174,7 @@ function savechitFundDetail(){
           cache: false,
           success: function(msg, textStatus, xhr) {
                 if(msg.STATUS == "OK"){
-                    window.location.href=host_url+'chitFund/chitFundView.html';
+                    window.location.href='chitFundView.html';
                 }else{
                     alert(msg.RESPONSE);
                 }

@@ -67,8 +67,31 @@
             </div>
 
              <ul class="nav">
+
+                        <li class="master">
+                            <a href="#Category" class="btn btn-info sideNavADefaultColor" data-toggle="collapse">
+                                <i class="pe-7s-plus"></i>
+                                <p class="textAlignLeft">BG Category</p>
+                            </a>
+                            <div id="Category" class="collapse in">
+                                <a href="../land/landView.html" class="sideBarCollapseFirst sideBarCollapseMenuActive">
+                                    <i class="pe-7s-user"></i>
+                                    <p>Lands</p>
+                                </a>
+
+                                <a href="../chitFund/chitFundView.html" class="sideBarCollapseLast ">
+                                    <i class="pe-7s-note2"></i>
+                                    <p>Chit Funds</p>
+                                </a>
+
+                                 <a href="../agarWood/agarWoodView.html" class="sideBarCollapseLast">
+                                    <i class="pe-7s-news-paper"></i>
+                                    <p>Agar Wood</p>
+                                </a>
+                            </div>
+                        </li>
                      
-                    <li class="active master">
+                    <!-- <li class="active master">
                         <a href="../land/landView.html">
                             <i class="pe-7s-user"></i>
                             <p>Lands</p>
@@ -146,7 +169,7 @@
                             <i class="pe-7s-users"></i>
                             <p>Enquiry</p>
                         </a>
-                    </li>
+                    </li> -->
                 </ul>
         </div>
     </div>
@@ -173,7 +196,7 @@
                         </li>
 
                     <li>
-                        <a href="javascript:;" onclick="logout();">
+                        <a href="javascript:;" onclick="logout('../login.html');">
                             <p>Log out</p>
                         </a>
                     </li>
